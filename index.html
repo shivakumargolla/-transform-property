@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranformation</title>
+    <style>
+        .maindiv{
+            width: 100%;
+            height: 800px;
+            border: 2px solid rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+        }
+        .maindiv p{
+
+
+            font-family: poppins;
+            text-align: center;
+            color: white;
+           
+        }
+        .show{
+            background-image: url(./ball.png);
+            margin-top: -510px;
+            margin-left: 400px;
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            border: 2px solid white;
+            border-radius: 30px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        label {
+            display: inline;
+            border: 2px solid white;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-family: poppins;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        #one:checked~.show{
+           
+            transform: rotate(10deg);
+            background-color:  #050505;
+            transition-duration: 2s;
+        }
+        #two:checked~.show{
+            transform: rotateY(60deg);
+            transform: skew(5deg, 30deg);
+            background-color:  #050505;
+            transition-duration: 2s;
+        }
+
+        #three:checked~.show{
+            transform: rotateX(100deg);
+            background-color:  #050505;
+            transition-duration: 2s;
+        }
+        #four:checked~.show{
+            transform: rotate(360deg);
+            background-color:  #050505;
+            transition-duration: 3s;
+        }
+
+        #five:checked~.show{
+            transform: translate(20px,10px);
+            transform: rotate3d(360g);
+            background-color:  #050505;
+            transition-duration: 2s;
+            
+        }
+        #six:checked~.show{
+            transform: scale(2,2);
+            background-color:  #050505;
+            transition-duration: 2s;
+
+        }
+
+        #seven:checked~.show{
+            transform: matrix(0.866,0.7,-0.8,0.866,0,0);
+            background-color:  #050505;
+            transition-duration: 2s;
+        }
+        #eight:checked~.show{
+            transform: matrix(0.586,0.8,-0.8,0.586,40,30);
+            background-color:  #050505;
+            transition-duration: 2s;
+        }
+
+        #eight:checked~.show{
+            transform: none;
+            background-color:  #050505;
+            transition-duration: 2s;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <p>Transform Property with Diffrent Values</p>
+
+        <input type="radio" name="Transfrom" id="one" >
+        <label for="one"> Transfrom (Rotate 10 deg)</label>
+        <br> <br> <br>
+
+        <input type="radio" name="Transfrom" id="two" >
+        <label for="one"> Transfrom (Rotate / Skew  60 deg)</label>
+        <br> <br> <br>
+
+        <input type="radio" name="Transfrom" id="three" >
+        <label for="one"> Transfrom (RotateX 45 deg)</label>
+        <br> <br> <br>
+
+        <input type="radio" name="Transfrom" id="four" >
+        <label for="one"> Transfrom (Rotate : 360 deg )</label>
+        <br> <br> <br>
+
+        <input type="radio" name="Transfrom" id="five" >
+        <label for="one"> Transform: translate(20px,10px);</label>
+        <br> <br> <br>
+
+        <input type="radio" name="Transfrom" id="six" >
+        <label for="one"> Transform: scale(4,4)</label>
+        <br> <br> <br>
+
+        <input type="radio" name="Transfrom" id="seven" >
+        <label for="one"> Transform: matrix(0.866,0.7,-0.8,0.866,0,0)</label>
+        <br> <br> <br>
+
+        <input type="radio" name="Transfrom" id="eight" >
+        <label for="one"> Transform: matrix(0.586,0.8,-0.8,0.586,40,30);</label>
+        <br> <br> <br>
+
+        
+
+        <input type="radio" name="Transfrom" id="nine" >
+        <label for="one"> Transfrom (none)</label>
+        
+
+        
+
+        <div class="show">
+
+        </div>
+        
+
+    </div>
+</body>
+</html>
